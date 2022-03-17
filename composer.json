@@ -1,0 +1,5 @@
+{
+    "require": {
+        "5pm-hdh/churchtools-api": "^1.3"
+    }
+}

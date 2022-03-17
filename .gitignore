@@ -1,0 +1,19 @@
+# Credentials
+credentials.inc
+
+# Composer
+vendor
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macos files
+._*
+.DS_Store
+
