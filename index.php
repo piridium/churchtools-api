@@ -13,10 +13,8 @@ use \CTApi\Requests\EventRequest;
 use \CTApi\Requests\EventAgendaRequest;
 include './credentials.inc';
 
-//set the url of your churchtools application api
-//important! ApiUrl must end with Top-Level-Domain. No paths allowed!
-CTConfig::setApiUrl("https://rebgarten.church.tools");
-
+// Configuration
+CTConfig::setApiUrl($url);
 //authenticates the application and load the api-key into the config
 try {
   CTConfig::authWithCredentials(
@@ -27,16 +25,17 @@ try {
   echo $e->getMessage();
   return;
 }
-
 // if everything works fine, the api-key is stored in your config
 $apiKey = CTConfig::getApiKey();
+// see documentation for further improvement: https://github.com/5pm-HDH/churchtools-api/blob/master/docs/CTConfig.md
 
-// Retrieve all events from now
+// Retrieve all events from now and the next 2 months
 $events = EventRequest::where('from', date('Y-m-d', strtotime('today')))
   ->where('to', date('Y-m-d', strtotime('+2months')))
   ->orderBy('startDate')
   ->get();
 
+// loop events
 foreach ($events as $event){
   $event = EventRequest::find($event->getId());
   $eventServices = $event?->getEventServices() ?? [];
