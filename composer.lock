@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "5pm-hdh/churchtools-api",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/5pm-HDH/churchtools-api.git",
-                "reference": "d019104a7d1cefe6896ecf892e34f653ddabb1ce"
+                "reference": "b2553b182fe01b2249a9a14419974421634f6fb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/5pm-HDH/churchtools-api/zipball/d019104a7d1cefe6896ecf892e34f653ddabb1ce",
-                "reference": "d019104a7d1cefe6896ecf892e34f653ddabb1ce",
+                "url": "https://api.github.com/repos/5pm-HDH/churchtools-api/zipball/b2553b182fe01b2249a9a14419974421634f6fb6",
+                "reference": "b2553b182fe01b2249a9a14419974421634f6fb6",
                 "shasum": ""
             },
             "require": {
@@ -50,9 +50,9 @@
             "description": "API-client for churchtools",
             "support": {
                 "issues": "https://github.com/5pm-HDH/churchtools-api/issues",
-                "source": "https://github.com/5pm-HDH/churchtools-api/tree/1.3.3"
+                "source": "https://github.com/5pm-HDH/churchtools-api/tree/1.3.4"
             },
-            "time": "2022-06-03T08:47:20+00:00"
+            "time": "2022-06-22T10:04:55+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -836,7 +836,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -883,7 +883,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.1.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.1.1"
             },
             "funding": [
                 {
