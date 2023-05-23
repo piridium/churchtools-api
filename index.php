@@ -35,27 +35,32 @@ $events = EventRequest::where('from', date('Y-m-d', strtotime('today')))
   ->orderBy('startDate')
   ->get();
 
-// loop events
-foreach ($events as $event){
-  $event = EventRequest::find($event->getId());
-  $eventServices = $event?->getEventServices() ?? [];
-  $speakers = [];
-  foreach ($eventServices as $eventService) {
-    if ($eventService?->requestService()?->getId() == 1) {
-      if ($eventService?->getName()){
-        $speakers[] = $eventService?->getName();
-      }
-    }
-  }
 
-  $title = "(" . $event?->getId() . ") ";
-  $title .= $event?->getName();
-  $title .= empty($speakers) ? '' : ' mit ' . join(', ', $speakers);
-  echo $title, "\n";
-  // echo $event->getDescription(), "\n";
-  echo $event?->getStartDate(), " - ", $event?->getEndDate(), "\n";
-  echo 'Kalender: ', $event?->getCalendar()->getTitle(), "\n";
-  // echo "uuid: ", $event->getGuid(), "\n";
+  // loop events
+foreach ($events as $event){
+  print_r($event->getName());
+  print_r($event->getDescription());
   echo "\n";
-  // $agenda = $event?->requestAgenda();
+
+  // $event = EventRequest::find($event->getId());
+  // $eventServices = $event?->getEventServices() ?? [];
+  // $speakers = [];
+  // foreach ($eventServices as $eventService) {
+  //   if ($eventService?->requestService()?->getId() == 1) {
+  //     if ($eventService?->getName()){
+  //       $speakers[] = $eventService?->getName();
+  //     }
+  //   }
+  // }
+
+  // $title = "(" . $event?->getId() . ") ";
+  // $title .= $event?->getName();
+  // $title .= empty($speakers) ? '' : ' mit ' . join(', ', $speakers);
+  // echo $title, "\n";
+  // // echo $event->getDescription(), "\n";
+  // echo $event?->getStartDate(), " - ", $event?->getEndDate(), "\n";
+  // echo 'Kalender: ', $event?->getCalendar()->getTitle(), "\n";
+  // // echo "uuid: ", $event->getGuid(), "\n";
+  // echo "\n";
+  // // $agenda = $event?->requestAgenda();
 }
